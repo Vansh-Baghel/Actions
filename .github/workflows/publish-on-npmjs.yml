@@ -15,11 +15,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20.11.0"
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@haxionaz'
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@haxionaz"
 
-      - run: npm publish --access public
+      - run: npm publish
         env:
-            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
