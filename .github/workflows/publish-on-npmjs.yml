@@ -1,7 +1,5 @@
 name: Publish Package to npmjs
 on:
-  release:
-    types: [created]
   push:
     branches:
       - main
@@ -17,10 +15,7 @@ jobs:
         with:
           node-version: "20.11.0"
           registry-url: "https://registry.npmjs.org"
-      - name: Install dependencies 🔧
-        run: npm ci
       - name: Publish package on NPM 📦
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
