@@ -10,10 +10,9 @@ jobs:
   npm-publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Publish if version has been updated
-        uses: Vansh-Baghel/Actions@main
+      - uses: actions/checkout@v4
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v4
         with:
           node-version: "20.11.0"
           registry-url: "https://registry.npmjs.org"
