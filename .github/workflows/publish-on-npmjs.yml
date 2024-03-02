@@ -8,6 +8,7 @@ jobs:
   npm-publish:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "${{secrets.NPM_TOKEN}}"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node
