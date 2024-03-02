@@ -1,3 +1,2 @@
-"# Actions" 
 * This is GH Actions in action! 😁
-* This is the test branch
+* This is the main branch

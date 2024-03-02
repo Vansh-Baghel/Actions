@@ -20,6 +20,6 @@ jobs:
       - name: Install dependencies 🔧
         run: npm ci
       - name: Publish package on NPM 📦
-        run: npm publish
+        run: npm publish --access public 
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
