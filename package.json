@@ -1,5 +1,9 @@
 {
-  "name": "test-actions",
+  "name": "@haxionaz/test-actions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vansh-Baghel/Actions.git"
+  },
   "version": "1.0.2",
   "description": "This is a basic node js server posted via GH actions",
   "author": "Vansh Baghel",
