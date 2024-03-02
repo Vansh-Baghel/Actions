@@ -15,7 +15,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20.11.0"
-          registry-url: "https://registry.npmjs.org"
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@haxionaz'
+
       - run: npm publish --access public
         env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
